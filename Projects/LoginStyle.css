@@ -1,0 +1,17 @@
+div{
+    background-color: bisque;
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 5px;
+    border-style: double;
+    border-width: 2px;
+    padding-bottom: 20px;
+    border-style: outset;
+
+}
+input{
+    padding-left: 6px;
+}
+body{
+    background-color: aquamarine;
+}

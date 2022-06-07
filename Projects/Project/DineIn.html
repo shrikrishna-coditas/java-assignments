@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dine-In</title>
+</head>
+<body>
+    <form action="">
+    <label for="NoOfPeopleList">For how many people?:</label>
+    <input list="NoOfPeopleList" name="NoOfPeopleList" ><br>
+    <datalist id="NoOfPeopleList">
+        <option value="1">
+        <option value="2">
+        <option value="3">
+        <option value="4">
+        <option value="5">
+        <option value="6">
+        <option value="7">
+        <option value="8">
+        <option value="9">
+        <option value="10">        
+    </datalist>
+    <label for="TableType">Type of table:</label>
+    <select name="TableType" id="TableType">
+        <option value="PureVeg">Pure Veg</option>
+        <option value="VegAndNonveg">Veg and Non-Veg</option>
+        <option value="BarAndRestro">Bar and Restro</option>
+    </select><br>
+    <label for="DateTime">Date and Time</label>
+    <input type="date" name="DateTime"><br>
+    <label for="TimeSlot">Time slot:</label>
+    <select name="TimeSlot" id="TableType">
+        <option value="12pm">12pm</option>
+        <option value="1pm">1pm</option>
+        <option value="2pm">2pm</option>
+        <option value="3pm">3pm</option>
+        <option value="7pm">7pm</option>
+        <option value="8pm">8pm</option>
+        <option value="9pm">9pm</option>
+        <option value="10pm">10pm</option>
+    </select><br>
+    <input type="submit" value="SEARCH">
+    </form>
+</body>
+</html>

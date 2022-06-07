@@ -1,0 +1,32 @@
+p.heading{
+    background-color: green;
+    opacity: 0.4;
+    color: rgb(0, 0, 0,1);
+    margin-left: auto;
+    padding-left: 70%;
+    direction: rtl;
+   /* unicode-bidi: bidi-override;*/
+}
+p.nheading{
+    text-decoration-color: aqua;
+    text-decoration-line: line-through;
+    text-decoration-style: wavy;
+    text-transform: uppercase;
+}
+div{
+    margin-left: 25%;
+    width: 50%;
+    align-items: center;
+    background-image: url("CoditasLogo.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+   /* border-style: outset;
+    border-width: 5px;*/
+    border: 5px outset red;
+    border-radius: 5px;
+    outline-style: outset;
+    outline-color: aqua;
+    outline-width: thick;
+    outline-offset: 3px;
+}
