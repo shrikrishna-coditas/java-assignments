@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>LoginDemo</display-name>
+  <welcome-file-list>
+    <welcome-file>LoginPage.html</welcome-file>
+  </welcome-file-list>
+  <servlet>
+  <servlet-name>Login</servlet-name>
+  	<servlet-class>com.LoginPage</servlet-class>
+  	<init-param>
+  	<param-name>pagename</param-name>
+  	<param-value>Login</param-value>
+  	</init-param>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>Login</servlet-name>
+  	<url-pattern>/Login</url-pattern>
+  </servlet-mapping>
+    
+  <servlet>
+  <servlet-name>WelcomePage</servlet-name>
+  	<servlet-class>com.WelcomePage</servlet-class>
+  		
+  		
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>WelcomePage</servlet-name>
+  	<url-pattern>/Welcome</url-pattern>
+  </servlet-mapping>
+  <context-param>
+  			<param-name>forName</param-name>
+  			<param-value>com.mysql.jdbc.Driver</param-value>
+  	</context-param>
+  	<context-param>
+  			<param-name>url</param-name>
+  			<param-value>jdbc:mysql://localhost/JavaTraining</param-value>
+  	</context-param>
+  	<context-param>
+  			<param-name>username</param-name>
+  			<param-value>root</param-value>
+  	</context-param>
+  	<context-param>
+  			<param-name>password</param-name>
+  			<param-value></param-value>
+  	</context-param>
+</web-app>
