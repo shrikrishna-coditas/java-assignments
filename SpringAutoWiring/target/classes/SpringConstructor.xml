@@ -1,0 +1,15 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+    <bean id="address" class="com.bean.Address">
+        <property name="hName" value="Samrudhi"/>
+        <property name="city" value="Dharwad"/>
+        <property name="state" value="Karnataka"/>
+    </bean>
+
+    <bean id="s1" class="com.bean.Student" autowire="constructor">
+        <constructor-arg index="0" value="101"/>
+        <constructor-arg index="1" value="Krishna"/>
+    </bean>
+
+</beans>

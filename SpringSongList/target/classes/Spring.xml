@@ -1,0 +1,14 @@
+<beans xmlns="http://www.springframework.org/schema/beans"       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"       xsi:schemaLocation="http://www.springframework.org/schema/beans	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+    <bean id="song" class="com.bean.SingerSongs">
+        <property name="singerName" value="KK"/>
+        <property name="singerDOB" value="22/03/2000"/>
+        <property name="singerAge" value="35"/>
+        <property name="songList">
+        <list>
+            <value>song1</value>
+            <value>song2</value>
+            <value>song3</value>
+        </list>
+        </property>
+    </bean>
+</beans>

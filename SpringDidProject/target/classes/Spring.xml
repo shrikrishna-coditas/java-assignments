@@ -1,0 +1,30 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+        <bean class="com.bean.Particpants" id="p1">
+                <property name="name" value="Dharmesh"/>
+                <property name="address" value="Ahamdabad"/>
+        </bean>
+        <bean class="com.bean.Particpants" id="p2">
+                <property name="name" value="Shakti"/>
+                <property name="address" value="Mumbai"/>
+        </bean>
+
+        <bean id="did" class="com.bean.DID">
+                <property name="seasonName" value="Season1"/>
+                <property name="brandPartners">
+                        <list>
+                                <value>Colgate</value>
+                                <value>ThumbsUp</value>
+                                <value>Pepsi</value>
+                        </list>
+                </property>
+                <property name="participants">
+                        <map>
+                                <entry key-ref="p1" value="teamRemo"></entry>
+                                <entry key-ref="p2" value="teamGeeta"></entry>
+                        </map>
+                </property>
+        </bean>
+
+</beans>

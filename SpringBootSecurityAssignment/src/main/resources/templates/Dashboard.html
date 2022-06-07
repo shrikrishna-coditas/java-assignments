@@ -1,0 +1,8 @@
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
+<sec:authorize access="hasRole('USER')">
+<html>
+    <body>
+     <p>This is Dashboard page</p>
+    </body>
+</html>
+</sec:authorize>

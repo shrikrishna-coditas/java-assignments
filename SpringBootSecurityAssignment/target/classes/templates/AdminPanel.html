@@ -1,0 +1,8 @@
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
+<sec:authorize access="hasRole('ADMIN')">
+<html>
+    <body>
+     <p>This is Admin Panel page</p>
+    </body>
+</html>
+</sec:authorize>

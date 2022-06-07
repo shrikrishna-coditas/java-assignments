@@ -1,0 +1,14 @@
+package com.example.mvc.Model;
+
+import javax.persistence.*;
+
+@Entity
+@Table(name="Product_Details")
+public class Product {
+	@Id
+	@GeneratedValue(strategy= GenerationType.AUTO)
+	private int pid;
+	private String product_name;
+	private String brand_name;
+	private float price;
+}

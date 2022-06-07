@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.bean.Hospital">
+        <id name="hospital_id">
+            <generator class="increment"></generator>
+        </id>
+        <property name="hospital_name"/>
+        <property name="hospital_location"/>
+        <property name="hospital_type"/>
+        <list name="doctorsList" cascade="all">
+            <key column="hospital_id"/>
+            <index column="doctorsList"/>
+            <one-to-many class="com.bean.Doctors"/>
+        </list>
+        <list name="staffList" cascade="all">
+            <key column="hospital_id"/>
+            <index column="staffList"/>
+            <one-to-many class="com.bean.Staff"/>
+        </list>
+        <list name="patientList" cascade="all">
+            <key column="hospital_id"/>
+            <index column="patientList"/>
+            <one-to-many class="com.bean.Patient"/>
+        </list>
+    </class>
+    
+    <class name="com.bean.Doctors">
+        <id name="doc_id">
+            <generator class="increment"></generator>
+        </id>
+        <set name="gynacSet" cascade="all">
+            <key column="doc_id"/>
+            <one-to-many class="com.bean.Gynac"/>
+        </set>
+        <set name="pediatricSet" cascade="all">
+            <key column="doc_id"/>
+            <one-to-many class="com.bean.Pediatric"/>
+        </set>
+        <set name="anastetiaSpecSet" cascade="all">
+            <key column="doc_id"/>
+            <one-to-many class="com.bean.AnastetiaSpec"/>
+        </set>
+        <list name="staffList" cascade="all">
+            <key column="doc_id"/>
+            <index column="staffList"/>
+            <one-to-many class="com.bean.Staff"/>
+        </list>
+    </class>
+
+    <class name="com.bean.Patient">
+        <id name="id">
+            <generator class="increment"></generator>
+        </id>
+        <property name="name"/>
+        <set name="monthlyDetailsSet">
+            <key column="id"/>
+            <one-to-many class="com.bean.MonthlyDetails"/>
+        </set>
+    </class>
+
+    <class name="com.bean.MonthlyDetails">
+        <id name="monthNo"/>
+        <property name="baby_stage"/>
+        <property name="exp_due"/>
+        <property name="bp"/>
+        <property name="sugar"/>
+        <property name="weight"/>
+    </class>
+
+    <class name="com.bean.Gynac">
+        <id name="id">
+            <generator class="increment"></generator>
+        </id>
+        <property name="name"/>
+        <property name="degree"/>
+        <property name="full_or_part"/>
+        <property name="perm_or_sub"/>
+    </class>
+
+    <class name="com.bean.Pediatric">
+        <id name="id">
+            <generator class="increment"></generator>
+        </id>
+        <property name="name"/>
+        <property name="degree"/>
+        <property name="full_or_part"/>
+        <property name="perm_or_sub"/>
+    </class>
+
+    <class name="com.bean.AnastetiaSpec">
+        <id name="id">
+            <generator class="increment"></generator>
+        </id>
+        <property name="name"/>
+        <property name="degree"/>
+        <property name="full_or_part"/>
+        <property name="perm_or_sub"/>
+    </class>
+
+    <class name="com.bean.Staff">
+        <id name="staff_id">
+            <generator class="increment"></generator>
+        </id>
+        <property name="staff_name"/>
+        <property name="staff_type"/>
+        <property name="staff_contact"/>
+    </class>
+</hibernate-mapping>
